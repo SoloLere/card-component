@@ -67,7 +67,7 @@ A cool animation effects for botton that renders the text transparent can be ach
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for learn how mix-blend-mode can be used to achive various animation effects.
+- [Example resource 1](https://www.youtube.com/watch?v=FFf7wnA5MqQ) - This helped me for learn how mix-blend-mode can be used to achive various animation effects.
 
 
 ## Author
