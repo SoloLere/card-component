@@ -1,0 +1,151 @@
+/*================================================
+    VARIABLES
+  ================================================
+*/
+
+$color-orange: hsl(31, 77%, 52%);
+$color-cyan: hsl(184, 100%, 22%);
+$color-cyan-dark: hsl(179, 100%, 13%);
+$color-gray: hsl(0, 0%, 95%);
+$color-white: hsla(0, 0%, 100%, 0.75);
+
+// BREAKPOINT
+$bp-large: 62.25em; // 1000px
+
+/*================================================
+    BASE STYLES
+  ================================================
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: $color-white;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, button {
+  color: $color-gray;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+/*================================================
+    CARDS
+  ================================================
+*/
+
+.container {
+  padding: 2rem 0;
+  width: calc(min(90%, 120rem));
+  min-height: 95vh;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 30rem;
+  padding: 5rem;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.card__svg {
+  align-self: start;
+}
+
+.card__btn {
+  align-self: start;
+  padding: 0.75rem 2rem;
+  border: 2px solid $color-white;
+  border-radius: 100px;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: $color-white;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    mix-blend-mode: screen;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 0.7rem rgba(#000, 0.3); /* decrement blurry in the same proportion as Y to get the best effects*/
+  }
+}
+
+.sedan {
+  background-color: $color-orange;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.suv {
+  background-color: $color-cyan;
+}
+
+.luxury {
+  background-color: $color-cyan-dark;
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+}
+
+@media screen and (min-width: $bp-large) {
+  .row {
+    flex-direction: row;
+  }
+
+  .sedan {
+    border-radius: 0;
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+  }
+
+  .luxury {
+    border-radius: 0;
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+  }
+
+  .card__btn {
+    margin-top: 3rem;
+  }
+}
