@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub repository](https://github.com/SoloLere/card-component.git)
-- Live Site URL: [Live sith](https://sololere.github.io/card-component/)
+- Live Site URL: [Live site](https://sololere.github.io/card-component/)
 
 ## My process
 
@@ -73,4 +73,4 @@ A cool animation effects for botton that renders the text transparent can be ach
 ## Author
 
 - Mail - [Oseni Solomon](jnrolalere@gmail.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/@SoloLere)
+- Frontend Mentor - [@myusername](https://www.frontendmentor.io/profile/@SoloLere)
