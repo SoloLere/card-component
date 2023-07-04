@@ -11,6 +11,7 @@ $color-white: hsla(0, 0%, 100%, 0.75);
 
 // BREAKPOINT
 $bp-large: 62.25em; // 1000px
+$bp-medium: 43.75em;// 700px
 
 /*================================================
     BASE STYLES
@@ -69,8 +70,22 @@ h1 {
 }
 
 .row {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas: 
+    "one"
+    "two"
+    "three";
+
+    @media screen and (min-width: $bp-medium) {
+      grid-template-areas: 
+        "one one two two"
+        ". three three .";
+    }
+
+    @media screen and (min-width: $bp-large) {
+      grid-template-areas: 
+        "one two three" ;
+    }
 }
 
 .card {
@@ -113,30 +128,56 @@ h1 {
 }
 
 .sedan {
+  grid-area: one;
   background-color: $color-orange;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
 }
 
 .suv {
+  grid-area: two;
   background-color: $color-cyan;
 }
 
 .luxury {
+  grid-area: three;
   background-color: $color-cyan-dark;
   border-bottom-left-radius: 0.7rem;
   border-bottom-right-radius: 0.7rem;
 }
 
-@media screen and (min-width: $bp-large) {
-  .row {
-    flex-direction: row;
-  }
-
+@media screen and (min-width: $bp-medium) {
   .sedan {
     border-radius: 0;
     border-top-left-radius: 0.7rem;
     border-bottom-left-radius: 0.7rem;
+  }
+
+  .suv {
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+  }
+
+  .luxury {
+    border-radius: 0;
+    border-bottom-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+  }
+
+  .card__btn {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: $bp-large) {
+  .sedan {
+    border-radius: 0;
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+  }
+
+  .suv {
+    border-radius: 0;
   }
 
   .luxury {

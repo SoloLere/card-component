@@ -51,8 +51,14 @@ h1 {
   align-items: center; }
 
 .row {
-  display: flex;
-  flex-direction: column; }
+  display: grid;
+  grid-template-areas: "one" "two" "three"; }
+  @media screen and (min-width: 43.75em) {
+    .row {
+      grid-template-areas: "one one two two" ". three three ."; } }
+  @media screen and (min-width: 62.25em) {
+    .row {
+      grid-template-areas: "one two three"; } }
 
 .card {
   width: 30rem;
@@ -88,25 +94,43 @@ h1 {
     /* decrement blurry in the same proportion as Y to get the best effects*/ }
 
 .sedan {
+  grid-area: one;
   background-color: #e38826;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem; }
 
 .suv {
+  grid-area: two;
   background-color: #006970; }
 
 .luxury {
+  grid-area: three;
   background-color: #004241;
   border-bottom-left-radius: 0.7rem;
   border-bottom-right-radius: 0.7rem; }
 
-@media screen and (min-width: 62.25em) {
-  .row {
-    flex-direction: row; }
+@media screen and (min-width: 43.75em) {
   .sedan {
     border-radius: 0;
     border-top-left-radius: 0.7rem;
     border-bottom-left-radius: 0.7rem; }
+  .suv {
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem; }
+  .luxury {
+    border-radius: 0;
+    border-bottom-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem; }
+  .card__btn {
+    margin-top: 3rem; } }
+
+@media screen and (min-width: 62.25em) {
+  .sedan {
+    border-radius: 0;
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem; }
+  .suv {
+    border-radius: 0; }
   .luxury {
     border-radius: 0;
     border-top-right-radius: 0.7rem;

@@ -11,7 +11,6 @@ This is a solution to the [3-column preview card component challenge on Frontend
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -32,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub repository](https://github.com/SoloLere/card-component.git)
+- Live Site URL: [Live sith](https://sololere.github.io/card-component/)
 
 ## My process
 
@@ -42,7 +41,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - SASS
 - CSS custom properties
-- Flexbox
+- Grid
 
 ### What I learned
 
@@ -65,9 +64,6 @@ A cool animation effects for botton that renders the text transparent can be ach
 }
 ```
 
-### Continued development
-
-I'll have to learm more about mix-blend-mode and also redisign the project using css grid.
 
 ### Useful resources
 
